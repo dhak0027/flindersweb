@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+	<definition name="loginLayout" template="/WEB-INF/views/default/loginTemplate.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/default/loginHeader.jsp"></put-attribute>
+		<put-attribute name="body" value=""></put-attribute>
+		<put-attribute name="footer" value="/WEB-INF/views/default/footer.jsp"></put-attribute>
+	</definition>
+
+ 	<definition name="login" extends="loginLayout">
+		<put-attribute name="body" value="/WEB-INF/views/login.jsp" />
+	</definition>
+ 
+	<definition name="baseLayout" template="/WEB-INF/views/default/mainTemplate.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/default/header.jsp"></put-attribute>
+		<put-attribute name="body" value=""></put-attribute>
+		<put-attribute name="footer" value="/WEB-INF/views/default/footer.jsp"></put-attribute>
+	</definition>
+
+	<definition name="userSearch" extends="baseLayout" >
+		<put-attribute name="menuselection"   value="link1"/>  
+		<put-attribute name="body" value="/WEB-INF/views/userSearch.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="userMaint" extends="baseLayout" >
+		<put-attribute name="menuselection"   value="link1"/>  
+		<put-attribute name="body" value="/WEB-INF/views/userMaint.jsp"></put-attribute>
+	</definition>
+		
+	<definition name="studentSearch" extends="baseLayout" >
+		<put-attribute name="menuselection"   value="link1"/>  
+		<put-attribute name="body" value="/WEB-INF/views/studentSearch.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="report" extends="baseLayout" >
+		<put-attribute name="menuselection"   value="link1"/>  
+		<put-attribute name="body" value="/WEB-INF/views/report.jsp"></put-attribute>
+	</definition>
+ 
+</tiles-definitions>
